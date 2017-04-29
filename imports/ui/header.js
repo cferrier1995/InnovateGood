@@ -10,5 +10,9 @@ Template.header.events({
     'click .new_request': function (event) {
         event.preventDefault();
         Router.go('new_request/:_id', {_id: Meteor.userId});
+    },
+    'click .viewProfile': function (event) {
+        event.preventDefault();
+        Router.go('profile/:_id', {_id: Meteor.userId});
     }
 });

@@ -1,0 +1,20 @@
+<template name = "requests">
+    <div class = "row">
+        {{#if hasRequests}}
+            {{#each requests}}
+                <div class = "panel panel-default">
+                    <div class = "panel-heading">
+                        {{name}}
+                    </div>
+                    <div class = "panel-body">
+                        Posted By: {{publisherName}}
+                        Urgency: {{urgency}}
+                    </div>
+                </div>
+            {{/each}}
+        {{else}}
+            <div class="alert alert-warning center-text" role="alert" ><b>This User hasn't posted any requests yet!</b></div>
+        {{/if}}
+    </div>
+</template>
+

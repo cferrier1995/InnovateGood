@@ -1,0 +1,26 @@
+<template name = "profile">
+    <div class = "row space-top">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div class = "panel panel-default">
+                <div class="panel-heading">
+                    <b class="title">{{username}}</b>
+                </div>
+                <div class="panel-body">
+                    <div class = "row">
+                        <div class="col-md-12">
+                            <b>Email:</b> {{getEmail}}
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <div class="col-md-12">
+                            <button class="viewRequests btn btn-sm btn-default">View Requested Supplies</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+
+    </div>
+</template>

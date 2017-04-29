@@ -18,7 +18,7 @@ if (Meteor.isServer){
     );
 
     Meteor.publish('requestsByUser', function requestPublication(userId){
-            return Requests.find({ownerId: userId},{sort: {date: -1}});
+            return Requests.find({publisherId: userId},{sort: {date: -1}});
         }
     );
 }

@@ -25,10 +25,11 @@ if (Meteor.isServer){
 
 Meteor.methods({
     'requests.insert'(name, urgency, description){
-        console.log("U tryna submit somthing")
+        console.log("U tryna submit somthing")//check to see if we are submitting
         check(name, String);
         check(urgency, Number);
         check(description, String);
+
         if (!this.userId){
             //confirm user is logged in
             throw new Meteor.Error("logged-out",
@@ -51,7 +52,9 @@ Meteor.methods({
             publisherId: this.userId,
             publisherName: Meteor.users.findOne(this.userId).username,
             urgency: urgency,
-            description: description
+            description: description,
+            status: 0,
+            donorID: null,
         });
 
         console.log (requestId);

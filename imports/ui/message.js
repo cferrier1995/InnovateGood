@@ -1,26 +1,17 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
+import { Requests } from '../api/requests.js';
+import { Messages } from '../api/messages.js';
+import { Conversations } from '../api/conversations.js';
 
-import './message.js'
-import './profile.html';
+import './message.html';
 
+Template.message.helpers({
 
-Template.profile.helpers({
-    messageBox (){
-        return Template.instance().messageBox;
-    },
-    getEmail() {
-        return this.emails[0].address;
-    },
-    differentUser(){
-        return Meteor.userId() != this._id;
-    }
 });
 
-Template.profile.events({
-    'click .viewRequests': function () {
-        Router.go('requests/:_userId', {_userId: this._id});
-    },
+Template.message.events({
+
     'submit .new-message' (event){
 
         // Prevent default browser form submit
@@ -30,8 +21,8 @@ Template.profile.events({
         const target = event.target;
         const message_text = target.message_text.value;
 
-        const receiverId = this._id;
-        const receiverName = this.username;
+        const receiverId = this.publisherId;
+        const receiverName = this.publisherName;
         console.log(message_text);
         console.log(receiverId);
         console.log(receiverName);
@@ -60,6 +51,6 @@ Template.profile.events({
             }
         });
 
-        Router.go('home');
+        //Router.go('home');
     },
 });

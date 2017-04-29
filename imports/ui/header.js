@@ -14,5 +14,9 @@ Template.header.events({
     'click .viewProfile': function (event) {
         event.preventDefault();
         Router.go('profile/:_id', {_id: Meteor.userId});
+    },
+    'click .viewMessages': function (event) {
+        event.preventDefault();
+        Router.go('messages');
     }
 });

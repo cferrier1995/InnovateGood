@@ -1,20 +1,29 @@
 <template name = "home">
     <div class = "row">
-        {{#if hasRequests}}
-            {{#each requests}}
-                <div class = "panel panel-default">
-                    <div class = "panel-heading">
-                        {{name}}
+        <div class = "col-md-1"></div>
+        <div class = "col-md-10">
+            {{#if hasRequests}}
+                {{#each requestBundles}}
+                    <div class = "panel panel-default">
+                        <div class = "panel-heading">
+                            Supplies needed by<button type="button" class="btn-link link viewProfile">{{this.name}}</button>
+                        </div>
+                        <div class = "panel-body">
+                            <div class = "row">
+                                Count: {{this.count}}
+                            </div>
+                            <div class = "row">
+                                <button type="button" class="btn viewRequests">View Requested Supplies</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class = "panel-body">
-                        Posted By: {{publisherName}}
-                        Urgency: {{urgency}}
-                    </div>
-                </div>
-            {{/each}}
-        {{else}}
-            <div class="alert alert-warning text-center" role="alert"><b>No requests yet. Try logging in and posting one!</b></div>
-        {{/if}}
+                {{/each}}
+            {{else}}
+                <div class="alert alert-warning text-center" role="alert"><b>No requests yet. Try logging in and posting one!</b></div>
+            {{/if}}
+        </div>
+        <div class = "col-md-1"></div>
+
     </div>
 </template>
 

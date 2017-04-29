@@ -1,4 +1,4 @@
-<template name="ApplicationLayout">
+﻿<template name="ApplicationLayout">
     <div class="container">
         <header>
             {{> header}}
@@ -12,18 +12,18 @@
 
 
 <template name="footer">
-    <div class="row">
+    <div class="row center">
         <div class="col-md-3">
-            <p class="text-center"><button type="button" class="btn btn-link" data-toggle="modal" data-target="#aboutUs">About Us</button></p>
+            <p><button type="button" class="btn btn-link" data-toggle="modal" data-target="#aboutUs">About Us</button></p>
         </div>
         <div class="col-md-3">
-            <p class="text-center"><button type="button" class="btn btn-link" data-toggle="modal" data-target="#contactUs">Contact Us</button></p>
+            <p><button type="button" class="btn btn-link" data-toggle="modal" data-target="#contactUs">Contact Us</button></p>
         </div>
         <div class="col-md-3">
-            <p class="text-center"><button type="button" class="btn btn-link" data-toggle="modal" data-target="#facts">Facts</button></p>
+            <p><button type="button" class="btn btn-link" data-toggle="modal" data-target="#facts">Facts</button></p>
         </div>
         <div class="col-md-3">
-            <p class="text-center"><button type="button" class="btn btn-link" data-toggle="modal" data-target="#conditions">Terms of Use</button></p>
+            <p><button type="button" class="btn btn-link" data-toggle="modal" data-target="#conditions">Terms of Use</button></p>
         </div>
     </div>
 
@@ -116,7 +116,7 @@
          <div class="row">
                 <div class="navbar navbar-inverse" role="navigation">
                     <div class="navbar-header">
-                        <a class="navbar-brand">{{getRouteName}}</a>
+                        <a class="navbar-brand"><strong class="title">Teacher Store</strong></a>
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>

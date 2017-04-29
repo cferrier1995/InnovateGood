@@ -7,14 +7,42 @@
                     <b class="title">{{username}}</b>
                 </div>
                 <div class="panel-body">
+		    <div class = "row">
+			<div class = "col-md-4">
+			</div>
+			<div class = "col-md-4">
+			    <img src="https://vignette4.wikia.nocookie.net/harrypotter/images/6/68/Dolores_Umbridge_Deathly_Hallows_promotional_image.jpg/revision/latest/scale-to-width-down/350?cb=20101127041001">
+			</div>
+			<div class = "col-md-4"></div>
+		    </div>
                     <div class = "row">
-                        <div class="col-md-12">
+                        <div class="col-md-6">
+                            <b>Name:</b> {{getName}}
+                        </div>
+                        <div class="col-md-6">
                             <b>Email:</b> {{getEmail}}
                         </div>
                     </div>
+		    <br>
                     <div class = "row">
+                        <div class="col-md-6">
+                            <b>County, State:</b> {{getCountyState}}
+                        </div>
+                        <div class="col-md-6">
+                            <b>School:</b> {{getSchool}}
+                        </div>
+                    </div><br>
+		    <div class = "row">
                         <div class="col-md-12">
+                            <b>About Me:</b> {{getAbout}}
+                        </div>
+                    </div><br>
+                    <div class = "row">
+                        <div class="col-md-6">
                             <button class="viewRequests btn btn-sm btn-default">View Requested Supplies</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="viewDonations btn btn-sm btn-default">View Donated Supplies</button>
                         </div>
                     </div>
                 </div>

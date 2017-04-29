@@ -1,15 +1,19 @@
 import { Router } from 'meteor/iron:router'
 import { Meteor } from 'meteor/meteor';
 import { Requests } from '../api/requests.js';
+import { Messages } from '../api/messages.js';
+import { Conversations } from '../api/conversations.js';
 
 import '../api/profiles.js';
-
 
 import '../ui/home.js';
 import '../ui/new_request.js';
 import '../ui/header.js';
 import '../ui/profile.js'
 import '../ui/requests.js'
+import '../ui/message.js';
+import '../ui/messages.js';
+import '../ui/conversation.js'
 
 import '../ui/ApplicationLayout.html';
 
@@ -61,4 +65,32 @@ Router.route('profile/:_id', {
     },
     layoutTemplate: 'ApplicationLayout',
     template: 'profile'
+});
+
+Router.route('messages', {
+    path: 'messages',
+    waitOn: function () {
+        return Meteor.subscribe('conversations');
+    },
+
+    layoutTemplate: 'ApplicationLayout',
+    template: 'messages'
+});
+
+Router.route('conversation/:_id', {
+    path: 'conversation/:_id',
+    waitOn: function () {
+        return [
+            Meteor.subscribe('messages'),
+            Meteor.subscribe('conversations', this.params._id)
+        ]
+    },
+    data: function(){
+        return {
+            conversation: Conversations.findOne({_id: this.params._id}),
+            messages: Messages.find()
+        }
+    },
+    layoutTemplate: 'ApplicationLayout',
+    template: 'conversation'
 });

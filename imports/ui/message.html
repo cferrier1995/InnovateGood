@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<template name="message">
+    <div class = "panel panel-default space-top">
+        <div class="panel-heading">
+            <b style="font-size: 24px; font-weight: bold;">New Message</b>
+        </div>
+        <div class="panel-body">
+            <div class = "row">
+                <div class="col-md-12">
+                    <form class = "new-message row">
+                        <div class="col-md-12">
+                            <textarea class="form-control" cols="40" rows="5" name="message_text" placeholder="Message" ></textarea>
+                            <input class="btn btn-sm btn-default" value="Send" type="submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

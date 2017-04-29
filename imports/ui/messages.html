@@ -1,10 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<template name="messages">
+    <div class = "space-top"></div>
+    <div class = "row">
+        <div class = "col-md-1"></div>
+        <div class = "col-md-10">
+            {{#if conversations}}
+                {{#each conversations}}
+                    <div class = "panel panel-default">
+                        <div class="panel-heading">
+                            <b><button type="button" class="btn-link link title conversation">Conversation With {{otherGuy}}</button></b>
+                        </div>
+                        <div class="panel-body">
+                            <div class = "row">
 
-</body>
-</html>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+
+            {{else}}
+                <div class="alert alert-warning" role="alert">You have no messages at this time.</div>
+            {{/if}}
+        </div>
+    </div>
+</template>

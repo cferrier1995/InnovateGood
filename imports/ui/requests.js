@@ -15,12 +15,20 @@ Template.requests.helpers({
   statusName(){
   	console.log("You seeing these rq's")
   	if(this.status == 0)
-  		return "Requested"
+  		return "Requested";
   	if(this.status == 1)
-  		return "Pending"
+  		return "Pending";
   	if(this.status == 2)
-  		return "Deliverd"
+  		return "Deliverd";
   	if(this.status == 3)
-  		return "Cancled"
+  		return "Cancled";
+  },
+  isPublisher(){
+  if(this.publisherId == Meteor.userId()){
+  	return true;
   }
+  else {
+  	return false;
+  }
+}
 });

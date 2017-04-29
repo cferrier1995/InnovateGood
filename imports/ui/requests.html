@@ -7,8 +7,10 @@
                         {{name}}
                     </div>
                     <div class = "panel-body">
-                        Posted By: {{publisherName}}
-                        <br>
+                        {{#unless isPublisher}}
+                            Posted By: {{publisherName}}
+                            <br>
+                        {{/unless}}
                         Urgency: {{urgency}}
                         <br>
                         Status : {{statusName}}

@@ -25,6 +25,7 @@ if (Meteor.isServer){
             }
         );
     });
+
     Meteor.publish('messages', function messagePublication(){
             return Messages.find({
                     $or: [
@@ -36,6 +37,9 @@ if (Meteor.isServer){
             );
         }
     );
+
+    
+
 }
 
 Meteor.methods({

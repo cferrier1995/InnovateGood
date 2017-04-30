@@ -7,7 +7,6 @@ export const Conversations = new Mongo.Collection('Conversations');
 //publish to client
 if (Meteor.isServer) {
     //only return messageChains that involve this user
-
     Meteor.publish('conversations', function conversationPublication() {
             var toReturn = Conversations.find({
                     $or: [

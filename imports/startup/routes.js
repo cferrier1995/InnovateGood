@@ -24,7 +24,7 @@ Router.configure({
 Router.route('home', {
     path: '/',
     waitOn: function () {
-        return Meteor.subscribe('requests');
+        return Meteor.subscribe('requestById');
     },
     data: function (){
         return {

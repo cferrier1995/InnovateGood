@@ -21,11 +21,15 @@ if (Meteor.isServer){
             return Requests.find({publisherId: userId},{sort: {date: -1}});
         }
     );
+
+    Meteor.publish('requestById', function requestPublicationById(){
+        var res = Requests.find({},{sort: {date: -1}});
+        return res;
+    })
 }
 
 Meteor.methods({
     'requests.insert'(name, urgency, description){
-        console.log("U tryna submit somthing")//check to see if we are submitting
         check(name, String);
         check(urgency, Number);
         check(description, String);

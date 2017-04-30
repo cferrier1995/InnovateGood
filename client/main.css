@@ -4,8 +4,8 @@ body {
   font-color: #6960EC
   font-size: 20px;
   background-color: #ffffff;
-  background-image: url("teachergoods_bg.png");
-  background-repeat: no-repeat;
+  background-image: url("teachergoods_bg2.png");
+  background-repeat: repeat-y;
   background-size: cover;
 
   position: absolute;
@@ -99,4 +99,12 @@ header .hide-completed {
 .scroll-bar{
   overflow-y: scroll;
   max-height: 500px;
+}
+
+.page-header h2{
+  margin-top: 0;
+}
+
+.page-header{
+  margin-top: 0;
 }

@@ -1,4 +1,7 @@
 <template name = "requests">
+    <div class="page-header">
+        <h2 class="center">{{requesterName}}'s Requested Supplies</h2>
+    </div>
     <div class = "row">
         <div class = "col-md-1"></div>
         <div class = "col-md-10">
@@ -16,9 +19,13 @@
                                 {{/unless}}
                                 Urgency: {{urgency}}
                                 <br>
-                                Status : {{statusName}}
+                                Status: {{statusName}}
                                 <br>                            
                                 Description: {{description}}
+                                {{#if isPending}}
+                                <br>
+                                Donor: {{donorName}}
+                                {{/if}}
                             </div>
                             <div class = "col-md-4">
 

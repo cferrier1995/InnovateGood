@@ -28,7 +28,6 @@ Template.conversation.helpers({
         );
         if (messages.count()){
             return messages;
-
         }
         else {
             return 0;
@@ -36,7 +35,14 @@ Template.conversation.helpers({
     },
     formatDate(date){
         return date.toDateString();
+    },
+    otherGuy() {
+    if (this.conversation.senderId == Meteor.userId()){
+        return this.conversation.receiverName;
+    } else {
+        return this.conversation.senderName;
     }
+}
 });
 
 Template.conversation.events({

@@ -5,7 +5,6 @@ import { Messages } from '../api/messages.js';
 import { Conversations } from '../api/conversations.js';
 
 import '../api/profiles.js';
-
 import '../ui/home.js';
 import '../ui/new_request.js';
 import '../ui/header.js';
@@ -44,11 +43,12 @@ Router.route('new_request/:_id', {
 Router.route('requests/:_userId', {
     path: 'requests/:_userId',
     waitOn: function () {
-        return Meteor.subscribe('requestsByUser', this.params._userId);
+        return [Meteor.subscribe('requestsByUser', this.params._userId), Meteor.subscribe('userData', this.params._userId)];
     },
     data: function() {
         return {
-            requests: Requests.find({publisherId: this.params._userId})
+            requests: Requests.find({publisherId: this.params._userId}),
+            profile: Meteor.users.findOne({_id: this.params._userId})
         }
     },
     layoutTemplate: 'ApplicationLayout',

@@ -6,7 +6,7 @@ import './requests.html';
 
 Template.requests.helpers({
   requesterName(){
-      return this.requests.fetch()[0].publisherName;
+      return this.profile.username;
   },
   hasRequests(){
     console.log(this.requests.count());

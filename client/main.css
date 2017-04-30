@@ -60,8 +60,9 @@ header .hide-completed {
   margin-left: 5px;
 }
  
-  .search {
-    width: 150px;
-    clear: both;
-  }
+.search {
+  width: 150px;
+  clear: both;
 }
+
+

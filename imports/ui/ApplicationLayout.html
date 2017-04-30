@@ -140,7 +140,7 @@ TeacherGoods solves problems for both teachers and parents. With our service, te
 <template name="header">
     <div class="row" style = "margin-right: 0px; margin-left: 0px">
          <div class="row">
-                <div class="navbar navbar-inverse" role="navigation">
+                <div class="navbar navbar-default" role="navigation">
                     <div class="navbar-header">
                         <a class="navbar-brand"><strong class="title">Teacher Store</strong></a>
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -151,15 +151,14 @@ TeacherGoods solves problems for both teachers and parents. With our service, te
                         </button>
                     </div>
                     <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav navbar-inverse">
+                        <ul class="nav navbar-nav">
                             {{#if currentUser}}
                                 <li><a href="" class="new_request">Request Supplies</a></li>
                                 <li><a href="" class="viewProfile">View Profile</a></li>
                                 <li><a href="" class="viewMessages">View Messages</a></li>
-
                             {{/if}}
                         </ul>
-                        <ul class="nav navbar-nav navbar-inverse navbar-right">
+                        <ul class="nav navbar-nav navbar-right">
                             {{> loginButtons}}
                         </ul>
                     </div>

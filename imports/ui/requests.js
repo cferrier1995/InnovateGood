@@ -5,6 +5,9 @@ import { Requests } from '../api/requests';
 import './requests.html';
 
 Template.requests.helpers({
+  requesterName(){
+      return this.requests.fetch()[0].publisherName;
+  },
   hasRequests(){
     console.log(this.requests.count());
     return (this.requests.count() > 0);

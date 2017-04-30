@@ -4,7 +4,7 @@ body {
   font-size: 14px;
   background-color: #ffffff;
   background-image: url("teachergoods_bg2.png");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
  
   position: absolute;
@@ -26,19 +26,51 @@ body {
 .navbar-default .navbar-nav li a {
   color: #ffffff;
 }
-
+.navbar-default .btn-primary:hover, .btn-block:hover {
+  background-color: #33A65D;
+  color: #ffffff;
+}
 .navbar-default .navbar-nav .open a, .navbar-default .navbar-nav
  .open a:hover, .navbar-default .navbar-nav .open a:focus {
   color: #ffffff;
   background-color: #68BD7C;
 }
 
+.btn {
+  color: #000000;
+  background-color: #FEFCFF;
+  border-color: #726E6D;
+}
+.btn:hover {
+  color: #3EA055;
+  background-color: #F5F5DC;
+  border-color: #33A65D;
+}
 .btn-primary {
   color: #ffffff;
   background-color: #68BD7C;
   border-color: #33A65D;
 }
-
+.btn-link {
+  font-weight: bold;
+  color: #000000;
+}
+.panel .btn-link:hover, .btn-link:focus, .btn-link:active {
+  font-weight: bold;
+  color: #ffffff;
+}
+.panel-body .btn-link:hover, .btn-link:focus, .btn-link:active {
+  font-weight: bold;
+  color: #33A65D;
+}
+.panel-default .panel-heading {
+  color: #ffffff;
+  background-color: #3EA055;
+}
+.panel-default .panel-body {
+  color: #000000;
+  background-color: #ffffff;
+}
 .container {
   max-width: 800px;
   margin: 0 auto;

@@ -24,11 +24,21 @@ Template.requests.helpers({
   		return "Canceled";
   },
   isPublisher(){
-  if(this.publisherId == Meteor.userId()){
-  	return true;
+	  if(this.publisherId == Meteor.userId()){
+	  	return true;
+	  }
+	  else {
+	  	return false;
+	  }
+  },  
+  isNeeded(){
+  	return this.status == 0;
   }
-  else {
-  	return false;
-  }
-}
+});
+
+Template.requests.events({
+ 'click .fulfill': function () {
+ 	Meteor.call('requests.fulfill', this._id);
+ }
+
 });

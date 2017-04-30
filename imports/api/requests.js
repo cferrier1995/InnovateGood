@@ -63,6 +63,17 @@ Meteor.methods({
 
         console.log (requestId);
         return requestId;
+    },
+
+    'requests.fulfill'(reqId){
+        check(reqId, String);
+
+        var request = Requests.findOne({_id: reqId});
+
+        Requests.update(reqId, {
+            $set: { status: 1,
+                    donorID: this.userId
+            }});
     }
 
 });

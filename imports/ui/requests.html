@@ -9,13 +9,25 @@
                             {{name}}
                         </div>
                         <div class = "panel-body">
-                            {{#unless isPublisher}}
-                                Posted By: {{publisherName}}
+                            <div class = "col-md-8">
+                                {{#unless isPublisher}}
+                                    Posted By: {{publisherName}}
+                                    <br>
+                                {{/unless}}
+                                Urgency: {{urgency}}
                                 <br>
-                            {{/unless}}
-                            Urgency: {{urgency}}
-                            <br>
-                            Status : {{statusName}}
+                                Status : {{statusName}}
+                                <br>                            
+                                Description: {{description}}
+                            </div>
+                            <div class = "col-md-4">                  
+                                {{#unless isPublisher}}
+                                {{#if isNeeded}}    
+                                    <button type="button" class="btn btn-default fulfill">I got it bae</button>
+                                    <br>
+                                {{/if}}
+                                {{/unless}}
+                            </div>
                         </div>
                     </div>
                 {{/each}}

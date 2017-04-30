@@ -1,8 +1,7 @@
 /* CSS declarations go here */
 body {
   font-family: Trebuchet MS;
-  font-color: #6960EC
-  font-size: 20px;
+  font-size: 16px;
   background-color: #ffffff;
   background-image: url("teachergoods_bg2.png");
   background-repeat: repeat-y;
@@ -26,7 +25,7 @@ body {
 }
 
 .navbar-default {
-  background-color: #1abc9c;
+  background-color: #99C68E;
 }
 
 .navbar-default .btn-primary:hover, .btn-block:hover {

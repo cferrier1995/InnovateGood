@@ -61,8 +61,28 @@ header .hide-completed {
   margin-left: 5px;
 }
  
+<<<<<<< HEAD
   .search {
     width: 150px;
     clear: both;
   }
+=======
+.search {
+  width: 150px;
+  clear: both;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-horizontal{
+  margin-bottom: 20px;
+}
+
+.space-top{
+  margin-top: 5px;
+>>>>>>> 65d8a87f152b83561f125e80f331e150115322fc
 }

@@ -61,5 +61,5 @@ Template.profile.events({
         });
 
         Router.go('home');
-    },
+    }
 });

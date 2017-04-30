@@ -23,7 +23,7 @@ if (Meteor.isServer){
     );
 
     Meteor.publish('requestById', function requestPublicationById(){
-        var res = Requests.find({},{sort: {date: -1}});
+        var res = Requests.find({},{sort: {publisherName: -1}});
         return res;
     })
 }

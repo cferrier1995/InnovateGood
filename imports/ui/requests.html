@@ -24,22 +24,24 @@
 
                                 {{#unless isPublisher}}
                                 {{#if isRequested}}    
-                                    <button type="button" class="btn btn-default fulfill">Dilver Supplies</button>
+                                    <button type="button" class="btn btn-default fulfill">Deliver Supplies</button>
                                     <br>
                                 {{/if}}
                                 {{/unless}}
 
                                 {{#if isPublisher}} 
-                                {{#if isPending}}   
                                 {{#unless isDeliverd}}
+                                {{#unless isCanceled}}
+                                {{#if isPending}}   
                                     <button type="button" class="btn btn-default accept">Accept Offer</button>
                                     <br>
                                     <button type="button" class="btn btn-default decline">Decline Offer</button>
                                     <br>
-                                    <button type="button" class="btn btn-default remove">Remove</button>
+                                {{/if}}
+                                     <button type="button" class="btn btn-default remove">Remove</button>
                                     <br>
                                 {{/unless}}
-                                {{/if}}
+                                {{/unless}}                               
                                 {{/if}}
 
                             </div>

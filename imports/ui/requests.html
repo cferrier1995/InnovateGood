@@ -20,13 +20,28 @@
                                 <br>                            
                                 Description: {{description}}
                             </div>
-                            <div class = "col-md-4">                  
+                            <div class = "col-md-4">        
+
                                 {{#unless isPublisher}}
-                                {{#if isNeeded}}    
-                                    <button type="button" class="btn btn-default fulfill">I got it bae</button>
+                                {{#if isRequested}}    
+                                    <button type="button" class="btn btn-default fulfill">Dilver Supplies</button>
                                     <br>
                                 {{/if}}
                                 {{/unless}}
+
+                                {{#if isPublisher}} 
+                                {{#if isPending}}   
+                                {{#unless isDeliverd}}
+                                    <button type="button" class="btn btn-default accept">Accept Offer</button>
+                                    <br>
+                                    <button type="button" class="btn btn-default decline">Decline Offer</button>
+                                    <br>
+                                    <button type="button" class="btn btn-default remove">Remove</button>
+                                    <br>
+                                {{/unless}}
+                                {{/if}}
+                                {{/if}}
+
                             </div>
                         </div>
                     </div>

@@ -31,14 +31,31 @@ Template.requests.helpers({
 	  	return false;
 	  }
   },  
-  isNeeded(){
+  isRequested(){
   	return this.status == 0;
+  },
+  isPending(){
+  	return this.status == 1;
+  },
+  isDeliverd(){
+  	return this.status == 2;
   }
+
+
 });
 
 Template.requests.events({
  'click .fulfill': function () {
  	Meteor.call('requests.fulfill', this._id);
+ },
+  'click .accept': function () {
+ 	Meteor.call('requests.accept', this._id);
+ },
+  'click .decline': function () {
+ 	Meteor.call('requests.decline', this._id);
+ },
+   'click .remove': function () {
+ 	Meteor.call('requests.remove', this._id);
  }
 
 });

@@ -68,12 +68,38 @@ Meteor.methods({
     'requests.fulfill'(reqId){
         check(reqId, String);
 
-        var request = Requests.findOne({_id: reqId});
+       // var request = Requests.findOne({_id: reqId});
 
         Requests.update(reqId, {
             $set: { status: 1,
                     donorID: this.userId
             }});
-    }
+    },
+
+    'requests.accept'(reqId){
+        check(reqId, String);
+
+        Requests.update(reqId, {
+            $set: { status: 2,
+                    donorID: this.userId
+            }});
+    },
+
+    'requests.decline'(reqId){
+        check(reqId, String);
+
+        Requests.update(reqId, {
+            $set: { status: 0,
+                    donorID: null
+            }});
+    },
+    'requests.remove'(reqId){
+        check(reqId, String);
+
+        Requests.update(reqId, {
+            $set: { status: 3,
+                    donorID: null
+            }});
+    },
 
 });

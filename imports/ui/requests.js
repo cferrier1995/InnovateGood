@@ -19,9 +19,9 @@ Template.requests.helpers({
   	if(this.status == 1)
   		return "Pending";
   	if(this.status == 2)
-  		return "Deliverd";
+  		return "Delivered";
   	if(this.status == 3)
-  		return "Cancled";
+  		return "Canceled";
   },
   isPublisher(){
   if(this.publisherId == Meteor.userId()){

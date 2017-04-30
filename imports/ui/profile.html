@@ -1,6 +1,5 @@
 <template name = "profile">
     <div class = "row space-top">
-
         <div class="col-md-1"></div>
         <div class="col-md-10">
             <div class = "panel panel-default">
@@ -22,30 +21,33 @@
             </div>
         </div>
         <div class = "col-md-1"></div>
+    </div>
+    <div class = "row space-top">
         <div class="col-md-1"></div>
         <div class="col-md-10">
 
             {{#if differentUser}}
-                <div class = "panel panel-default space-top">
+                <div class = "panel panel-default">
                     <div class="panel-heading">
                         <b style="font-size: 24px; font-weight: bold;">New Message</b>
                     </div>
                     <div class="panel-body">
-                        <div class = "row">
-                            <div class="col-md-12">
-                                <form class = "new-message row">
-                                    <div class="col-md-12">
-                                        <textarea class="form-control" cols="40" rows="5" name="message_text" placeholder="Message" ></textarea>
-                                        <input class="btn btn-sm btn-default" value="Send" type="submit">
-                                    </div>
-                                </form>
-                            </div>
+                        <div class = "col-md-1"></div>
+                        <div class = "col-md-10">
+                            <form class ="new-message">
+                                <div class = "row">
+                                    <textarea class="form-control" cols="40" rows="5" name="message_text" placeholder="Message" ></textarea>
+                                </div>
+                                <div class = "row">
+                                    <input class="btn btn-sm btn-default" value="Send" type="submit">
+                                </div>
+                            </form>
                         </div>
+                        <div class = "col-md-1"></div>
                     </div>
                 </div>
             {{/if}}
         </div>
         <div class="col-md-1"></div>
-
     </div>
 </template>

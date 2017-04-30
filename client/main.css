@@ -65,4 +65,16 @@ header .hide-completed {
   clear: both;
 }
 
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.form-horizontal{
+  margin-bottom: 20px;
+}
+
+.space-top{
+  margin-top: 5px;
+}

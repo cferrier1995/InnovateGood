@@ -4,7 +4,6 @@
             {{> header}}
         </header>
             {{> yield}}
-        <hr>
         <footer>
             {{> footer}}
         </footer>
@@ -13,6 +12,8 @@
 
 
 <template name="footer">
+    <hr>
+
     <div class="row center">
         <div class="col-md-3">
             <p><button type="button" class="btn btn-link" data-toggle="modal" data-target="#aboutUs">About Us</button></p>

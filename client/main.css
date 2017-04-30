@@ -1,51 +1,45 @@
 /* CSS declarations go here */
 body {
-  font-family: Lucida Sans Unicode;
-  font-size: 14px;
+  font-family: Trebuchet MS;
+  font-color: #6960EC
+  font-size: 20px;
   background-color: #ffffff;
-  background-image: url("teachergoods_bg2.png");
+  background-image: url("teachergoods_bg.png");
   background-repeat: no-repeat;
   background-size: cover;
- 
+
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
- 
+
   padding: 0;
   margin: 0;
-}
-
-.navbar-default {
-  background-color: #A9E2B7;
-}
-.navbar-default .navbar-brand {
-  color: #ffffff;
-}
-.navbar-default .navbar-nav li a {
-  color: #ffffff;
-}
-
-.navbar-default .navbar-nav .open a, .navbar-default .navbar-nav
- .open a:hover, .navbar-default .navbar-nav .open a:focus {
-  color: #ffffff;
-  background-color: #68BD7C;
-}
-
-.btn-primary {
-  color: #ffffff;
-  background-color: #68BD7C;
-  border-color: #33A65D;
 }
 
 .container {
   max-width: 800px;
   margin: 0 auto;
   min-height: 100%;
-  background-color: #FEFCFF;
+  background: white;
 }
- 
+
+.navbar-default {
+  background-color: #1abc9c;
+}
+
+.navbar-default .navbar-brand {
+  color: #ecf0f1;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #ecf0f1;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ecf0f1;
+}
 header {
   padding: 10px 5px 5px 5px;
   position: relative;
@@ -100,4 +94,9 @@ header .hide-completed {
 
 .space-top{
   margin-top: 5px;
+}
+
+.scroll-bar{
+  overflow-y: scroll;
+  max-height: 500px;
 }

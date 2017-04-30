@@ -25,7 +25,7 @@ body {
 }
 
 .navbar-default {
-  background-color: #99C68E;
+  background-color: #88ba7c;
 }
 
 .navbar-default .btn-primary:hover, .btn-block:hover {
@@ -38,11 +38,11 @@ body {
   background-color: #68BD7C;
 }
 .navbar-default .navbar-brand {
-  color: #ecf0f1;
+  color: #ffffff;
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: #ecf0f1;
+  color: #FEFCFF;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -76,8 +76,8 @@ body {
   color: #33A65D;
 }
 .panel-default .panel-heading {
-  color: #ffffff;
-  background-color: #68BD7C;
+  color: #34282C;
+  background-color: #99C68E;
 }
 .panel-default .panel-body {
   color: #000000;

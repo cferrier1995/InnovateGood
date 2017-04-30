@@ -41,7 +41,6 @@ Template.conversation.helpers({
 
 Template.conversation.events({
     'submit .new-message' (event){
-
         var receiverId, receiverName = "";
         if (this.conversation.receiverId == Meteor.userId()){
             //we are the owner, send message to the one who started the conversation.

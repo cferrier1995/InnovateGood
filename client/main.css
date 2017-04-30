@@ -2,8 +2,9 @@
 body {
   font-family: sans-serif;
   background-color: #ffffff;
-  background-image: linear-gradient(to bottom, #666362, #d1d0ce 100%);
-  background-attachment: fixed;
+  background-image: url('https://github.com/cferrier1995/InnovateGood/blob/master/teachergoods_bg.png?raw=true');
+  background-repeat: no-repeat;
+  background-size: cover;
  
   position: absolute;
   top: 0;

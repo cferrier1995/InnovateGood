@@ -1,7 +1,4 @@
 <template name = "requests">
-    <div class="page-header">
-        <h2 class="center">{{requesterName}}'s Requested Supplies</h2>
-    </div>
     <div class = "row">
         <div class = "col-md-1"></div>
         <div class = "col-md-10">
@@ -19,13 +16,9 @@
                                 {{/unless}}
                                 Urgency: {{urgency}}
                                 <br>
-                                Status: {{statusName}}
+                                Status : {{statusName}}
                                 <br>                            
                                 Description: {{description}}
-                                {{#if isPending}}
-                                <br>
-                                Donor: {{donorName}}
-                                {{/if}}
                             </div>
                             <div class = "col-md-4">
 
@@ -40,9 +33,9 @@
                                 {{#unless isDeliverd}}
                                 {{#unless isCanceled}}
                                 {{#if isPending}}   
-                                    <button type="button" class="btn btn-default accept">Accept Offer</button>
+                                    <button type="button" class="btn btn-default accept">Accept Donation</button>
                                     <br>
-                                    <button type="button" class="btn btn-default decline">Decline Offer</button>
+                                    <button type="button" class="btn btn-default decline">Decline Donation</button>
                                     <br>
                                 {{/if}}
                                      <button type="button" class="btn btn-default remove">Remove</button>

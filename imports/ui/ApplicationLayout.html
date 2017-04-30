@@ -34,10 +34,16 @@
             <div class="modal-content">
                 <div class="modal-header text-center">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">About UMBC</h4>
+                    <h4 class="modal-title">About Us</h4>
                 </div>
                 <div class="modal-body">
-                    <p>The University of Maryland, Baltimore County is an American public research university, located in Baltimore County, Maryland, United States, mostly in the community of Catonsville, approximately 10 minutes from downtown Baltimore City, 9 minutes from Baltimore–Washington International Airport, and 30 minutes from Washington, D.C. With a fall 2014 enrollment of about 14,000 students, over 50 undergraduate majors, over 60 graduate programs, and the first university research park in Maryland. UMBC has been named the #1 Up-and-Coming University for six years in a row, since 2009, by US News & World Report. In addition, US News & World Report has placed UMBC in the top ten for best undergraduate teaching six years in a row, being placed at #5, the second highest-ranked public university.</p>
+                    <p>TeacherGoods is a non-profit service for public school committed to helping teachers get the classroom supplies they need throughout the school year and to help all members of the community reduce waste from excess school supplies. 
+<br><br>
+Teachers all over the country spend anywhere from a couple hundred dollars to over a thousand dollars out of their own pockets each year buying classroom supplies to create an effective, conducive learning environment for their students. These supplies include not only classroom materials, but also school supplies for less fortunate students when they need them. As teachers who care for their students' education, the money is willingly spent. Nonetheless, the out-of-pocket costs for teachers are a significant burden on their already stringent budget.
+<br><br>
+Parents and their children generally spend less than $250 a year on school supplies, and often times they are purchasing new supplies each year. Forty-five percent (45%) of people buy new supplies because they're required - meaning the majority buy them because of trend or peer pressure, and, most of all, because of the 'buy-more, save-more' back-to-school promotions (82% of people buy new supplies for this reason alone!). But, at the end of each year, students often have school supplies left over, unused, untouched, or barely used. Many times, a notebook will have five used pages and the rest is brand new - but won't be used again. These supplies are wasted, collecting dust in a closet, basement, or garage, when they could be used again.
+<br><br>
+TeacherGoods solves problems for both teachers and parents. With our service, teachers throughout the year can list materials and supplies they are in need of, and members of the community can check these lists and donate items that they don't need. Students can use this service to actively contribute to their classroom throughout the year as well. With TeacherGoods, your community can become actively involved in helping schools flourish, by allowing teachers to focus on investing quality teaching strategies in their students without the simple limitation of materials. </p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -57,17 +63,39 @@
                     <h4 class="modal-title">Contact Us</h4>
                 </div>
                 <div class="modal-body">
-                    <p class="text-center">Some kind of contact form would go here.</p>
+                    <p class="text-center">Contact Form:</p>
+                    <form class="form-inline">
+                      <div class="form-group">
+                        <label for="yourName">Name</label>
+                        <input type="text" class="form-control" id="yourName" placeholder="Your Name">
+                      </div>
+			 <div class="form-group">
+                        <label for="yourEmail">Email</label>
+                        <input type="email" class="form-control" id="yourEmail" placeholder="your.email@domain.com">
+                      </div>
+                    </form>
+                    <br>
+                    <p><strong>Are you a teacher?</strong></p>
+                      <label class="radio-inline">
+                      <input type="radio" name="options" id="role1" value="yes"> Yes
+                      </label>
+                      <label class="radio-inline">
+                      <input type="radio" name="options" id="role2" value="no"> No
+                      </label>
+                    <br>
+		    <form>
+                      <div class="form-group">
+                        <label for="yourMessage">Message</label>
+                        <textarea class="form-control" rows="5" placeholder="Your message">
+                        </textarea>
+                      </div>
+                    </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
+              </div>
         </div>
     </div>
-
-    <div id="facts" class="modal fade" role="dialog">
+   
+   <div id="facts" class="modal fade" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
@@ -83,7 +111,6 @@
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -105,7 +132,6 @@
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
-
         </div>
     </div>
 </template>
@@ -129,8 +155,6 @@
                             {{#if currentUser}}
                                 <li><a href="" class="new_request">Request Supplies</a></li>
                                 <li><a href="" class="viewProfile">View Profile</a></li>
-                                <li><a href="" class="viewMessages">View Messages</a></li>
-
                             {{/if}}
                         </ul>
                         <ul class="nav navbar-nav navbar-inverse navbar-right">

@@ -39,8 +39,10 @@ Template.requests.helpers({
   },
   isDeliverd(){
   	return this.status == 2;
+  },
+  isCanceled(){
+  	return this.status == 3;
   }
-
 
 });
 

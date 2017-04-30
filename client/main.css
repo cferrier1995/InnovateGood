@@ -4,7 +4,7 @@ body {
   font-color: #6960EC
   font-size: 20px;
   background-color: #ffffff;
-  background-image: url('https://github.com/cferrier1995/InnovateGood/blob/master/teachergoods_bg.png?raw=true');
+  background-image: url("../public/teachergoods_bg.png");
   background-repeat: no-repeat;
   background-size: cover;
  

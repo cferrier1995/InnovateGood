@@ -18,5 +18,9 @@ Template.header.events({
     'click .viewMessages': function (event) {
         event.preventDefault();
         Router.go('messages');
+    },
+    'click .title': function (event) {
+        event.preventDefault();
+        Router.go('home');
     }
 });

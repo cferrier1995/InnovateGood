@@ -19,9 +19,13 @@
                                 {{/unless}}
                                 Urgency: {{urgency}}
                                 <br>
-                                Status : {{statusName}}
+                                Status: {{statusName}}
                                 <br>                            
                                 Description: {{description}}
+                                {{#if isPending}}
+                                <br>
+                                Donor: {{donorName}}
+                                {{/if}}
                             </div>
                             <div class = "col-md-4">
 

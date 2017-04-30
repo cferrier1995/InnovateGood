@@ -59,6 +59,7 @@ Meteor.methods({
             description: description,
             status: 0,
             donorID: null,
+            donorName: null,
         });
 
         console.log (requestId);
@@ -72,7 +73,8 @@ Meteor.methods({
 
         Requests.update(reqId, {
             $set: { status: 1,
-                    donorID: this.userId
+                    donorID: this.userId,
+                    donorName: Meteor.users.findOne(this.userId).username
             }});
     },
 
@@ -81,7 +83,8 @@ Meteor.methods({
 
         Requests.update(reqId, {
             $set: { status: 2,
-                    donorID: this.userId
+                    donorID: this.userId,
+                    donorName: Meteor.users.findOne(this.userId).username
             }});
     },
 
